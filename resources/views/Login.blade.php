@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 </head>
 <body>
     
@@ -19,13 +20,17 @@
         <div class="wrapper-right">
                 <div class="form-box">
                     <div class="form-value">
-                        <form action="">
+                        <form action="/Login" method="POST">
+                            @csrf
                             <h2>Login</h2>
                             <div class="inputbox">
-                                <input type="text" class="input-box" placeholder="Username">
+                                <input name="Username" type="text" class="input-box" placeholder="Username">
                             </div>
                             <div class="inputbox">
-                                <input type="text" class="input-box" placeholder="Password">
+                                <input name="Password" type="Password" class="input-box" placeholder="Password">
+                                <span>
+                                    <i class="fa fa-eye-slash" aria-hidden="true" id="eye"></i>
+                                </span>
                             </div>
                             <div class="forgot">
                                 <label for=""><input type="checkbox">Remember Me <a href="#">Forgot Password</a></label>
